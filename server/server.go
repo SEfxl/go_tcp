@@ -14,7 +14,7 @@ func process(conn net.Conn)  {
 		//创建一个新的切片
 		buf := make([]byte,1024)
 		//等待客户端通过conn发送信息,如果客户端链接没有数据,协程将一直阻塞在这里
-		fmt.Println("服务端:"+conn.LocalAddr().String()+" 在等待客户端:"+conn.RemoteAddr().String()+"的输入")
+		//fmt.Println("服务端:"+conn.LocalAddr().String()+" 在等待客户端:"+conn.RemoteAddr().String()+"的输入")
 		n,err:=conn.Read(buf) //从conn中读取数据
 
 		if err == io.EOF {
